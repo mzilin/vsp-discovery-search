@@ -1,0 +1,48 @@
+# Server properties
+server:
+  port: 8096
+
+# Information for the info endpoint
+info:
+  app:
+    environment: DEV
+    name: Search Service
+    description: Search Service Local Instance
+
+# Spring application properties
+spring:
+  application:
+    name: search
+  profiles:
+    active: dev
+  config:
+    import:
+      - optional:configserver:${CONFIG_SERVER_URL}
+      - optional:file:./env.properties
+
+
+# Eureka configuration
+eureka:
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: ${EUREKA_CLIENT_DEFAULT_ZONE}
+  instance:
+    preferIpAddress: true
+
+# Management properties
+management:
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: info, health, refresh
+
+logging:
+  level:
+    root: INFO
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
