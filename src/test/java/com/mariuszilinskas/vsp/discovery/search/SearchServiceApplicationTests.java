@@ -1,4 +1,4 @@
-package com.mariuszilinskas.vsp.searchservice;
+package com.mariuszilinskas.vsp.discovery.search;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
