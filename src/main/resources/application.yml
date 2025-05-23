@@ -1,18 +1,18 @@
 # Server properties
 server:
-  port: 8096
+  port: 8140
 
 # Information for the info endpoint
 info:
   app:
     environment: DEV
-    name: Search Service
-    description: Search Service Local Instance
+    name: search-service
+    description: Search Service - Local Instance
 
 # Spring application properties
 spring:
   application:
-    name: search
+    name: search-service
   profiles:
     active: dev
   config:
@@ -20,7 +20,6 @@ spring:
       - optional:configserver:${CONFIG_SERVER_URL}
       - optional:file:./env.properties
   elasticsearch:
-    rest:
       uris: ${ES_URIS}
       username: ${ES_USERNAME}
       password: ${ES_PASSWORD}
