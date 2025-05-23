@@ -1,4 +1,4 @@
-package com.mariuszilinskas.vsp.searchservice.config;
+package com.mariuszilinskas.vsp.discovery.search.config;
 
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
