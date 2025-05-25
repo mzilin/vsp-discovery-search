@@ -6,13 +6,13 @@ server:
 info:
   app:
     environment: DEV
-    name: search-service
+    name: ${spring.application.name}
     description: Search Service - Local Instance
 
 # Spring application properties
 spring:
   application:
-    name: search-service
+    name: discovery-search
   profiles:
     active: dev
   config:
